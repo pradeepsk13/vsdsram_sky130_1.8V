@@ -33,6 +33,9 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
 4. xschem (Optional) : An EDA tool for drawing hierarchical circuit schematics and making Spice - Verilog - VHDL netlists for simulation.For installation procedure visit https://sourceforge.net/projects/xschem/. To configure and learn more on xschem, gaw waveform viewer and integrating sky130 visit https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md .
      
 # Custom Cells Required for OpenRAM
+OpenRAM Compiler Flow : Image courtesy "Matthew R Guthaus"  
+![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/others/openram.png)
+
 * SRAM Bit cell  
 * Sense Amplifier circuit  
 * Write Driver Circuit  
