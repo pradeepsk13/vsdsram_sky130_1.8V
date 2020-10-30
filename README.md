@@ -206,7 +206,7 @@ $ ngspice 1bitsram_write.cir
 
 # Contact Information  
 * Pradeepkumar S K, Assistant Professor,Electronics and Communication Engineering, Kalpataru Institute of Technology, Tiptur, Karnataka.     
-   - pradeepsk13@gmail.com
+   -E-mail: pradeepsk13@gmail.com
 * Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. - kunalghosh@gmail.com
 * Philipp Gühring, Software Architect, LibreSilicon Assocation - pg@futureware.at
 
