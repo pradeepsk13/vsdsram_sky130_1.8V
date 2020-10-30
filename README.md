@@ -13,7 +13,7 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
 - [Contact Information](#contact-information)  
 
 # Prerequisite and Instructions
-1. VSD_SRAM : To clone this repositary enter the following commands in your terminal.
+1. VSD_SRAM : To clone this repository enter the following commands in your terminal.
    ~~~
        $ sudo apt install -y git
        $ git clone https://github.com/pradeepsk13/VSD_SRAM.git
