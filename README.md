@@ -29,7 +29,7 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
    ~~~
       $ git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
    ~~~
-      Note: Copy the sky130pdk library folder and paste inside prelayout folder of VSD_SRAM repo to work without changing netlist files ( You can also include library path properly in each netlist files if you wish to have library somewhere)
+      Note: Copy the sky130pdk library folder and paste inside prelayout folder of VSD_SRAM repo to work without changing netlist files ( You can also include library path in each netlist files accordingly, if you wish to have library somewhere)
       
 4. xschem (Optional) : An EDA tool for drawing hierarchical circuit schematics and making Spice - Verilog - VHDL netlists for simulation.For installation procedure visit https://sourceforge.net/projects/xschem/. To configure and learn more on xschem, gaw waveform viewer and integrating sky130 visit https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md .
      
