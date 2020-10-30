@@ -39,8 +39,12 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
 * Tristate Buffer  
 * D-Flip Flop
 
+# SRAM Block Diagram
+![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/others/SRAM_Block_Diagram.png)
+
 
 #  Schematics and Prelayout Simulations
+
  To perform simulations enter the following command to change present working directory to "prelayout"and later following commands to simulate.
  ~~~
    $ cd VSD_SRAM-master/Simulation/Prelayout
@@ -48,6 +52,7 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
 
 ### 1. 6T SRAM Cell
 ![](https://github.com/pradeepsk13/VSD_SRAM/blob/master/Schematics/SRAM_6T_Cell.png)
+
 **-> Read Operation**  
 ```
 $ ngspice cell6T_read.cir
@@ -167,6 +172,8 @@ $ ngspice dff.cir
 ![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/DFF.png)
 
 ### 1-Bit SRAM  
+
+![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/others/1bitsram.PNG)
 
 **-> Read Operation**
 ```
