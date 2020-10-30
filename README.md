@@ -19,8 +19,8 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
        $ git clone https://github.com/pradeepsk13/VSD_SRAM.git
    ~~~
 
-2. ngspice: An open source spice simulator for electronic circuits. For installation in Windows and Linux platform visit http://ngspice.sourceforge.net/download.html 
-       For Ubuntu enter the command below in terminal.       
+2. ngspice: An open source spice simulator for electronic circuits. For installation in Windows and Linux platform visit http://ngspice.sourceforge.net/download.html .
+       For Ubuntu users enter the command below in terminal.       
    ~~~     
         $ sudo apt-get install -y ngspice
    ~~~     
