@@ -1,0 +1,62 @@
+SRAM (1 Bit Read)
+
+**** Including library *******
+
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+****6T Cell******
+
+XM3 q qb vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+XM4 q qb gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.26
+XM5 qb q vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+XM6 qb q gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.26
+XM1 q wl bl gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM2 qb wl blb gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+
+*****Precharge********
+XM7 bl gnd vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+XM8 blb gnd vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+
+.subckt inv ip op vdd gnd
+XM1 op ip vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+XM2 op ip gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+.ends inv
+
+********Sense Amplifier**********
+
+XM9 dout1 bl 3 3 sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM10 2 blb 3 3 sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM11 dout1 2 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1
+XM12 2 2 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1
+XM13 3 rd_en gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.84
+xinv dout1 dout vdd gnd inv
+
+
+*********Write Driver***********
+
+.subckt nor2ip in1 in2 out vdd gnd
+XM1 out in1 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM2 out in2 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM3 out in1 temp temp sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+XM4 temp in2 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+.ends nor2ip
+xinv1 din dinb vdd gnd inv
+xinv2 dinb dinbb vdd gnd inv
+xnor2ip1 wb dinb out1 vdd gnd nor2ip
+xnor2ip2 wb dinbb out2 vdd gnd nor2ip
+XM16 blb out1 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1
+XM17 bl out2 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1
+
+V1 vdd gnd dc 1.8V
+Vwl wl gnd pulse 0 1.8 0 60ps 60ps 5ns 10ns
+Vq q gnd pulse 0 1.8 0 60ps 60ps 1ns 2ns
+Vrd rd_en gnd pulse 0 1.8 0 60ps 60ps 5ns 10ns
+Vwb wb gnd dc 1.8V
+Vdin din gnd dc 0V
+
+.tran 0.1p 20n
+.control
+run
+plot V(rd_en)+10 V(dout) V(bl)+4 V(blb)+2 V(q)+8 V(qb)+6
+.endc
+.end

@@ -1,0 +1,39 @@
+Write Driver
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+.subckt nor2ip in1 in2 out vdd gnd
+XM1 out in1 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM2 out in2 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM3 out in1 temp vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+XM4 temp in2 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+.ends nor2ip
+
+.subckt inv ip op vdd gnd
+XM1 op ip vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+XM2 op ip gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+.ends inv
+
+.subckt driver bl blb wb din vdd gnd
+xinv1 din dinb vdd gnd inv
+xinv2 dinb dinbb vdd gnd inv
+xnor2ip1 wb dinb out1 vdd gnd nor2ip
+xnor2ip2 wb dinbb out2 vdd gnd nor2ip
+XM1 blb out1 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM2 bl out2 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+.ends driver
+
+*Precharge circuit added for simulation purpose only
+XM1 bl gnd vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+XM2 blb gnd vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+
+V1 vdd gnd dc 1.8V
+V2 wb gnd pulse 0 1.8 0 60ps 60ps 2ns 4ns
+V3 din gnd pulse 0 1.8 0 60ps 60ps 0.5ns 1ns
+xdriver bl blb wb din vdd gnd driver
+
+.tran 0.1p 10n
+.control
+run
+plot V(wb)+6 V(din)+4 V(bl)+2 V(blb)
+.endc
+.end 
