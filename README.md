@@ -5,32 +5,32 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
 # Table of Contents  
 - [Prerequisite and Instructions](#Prerequisite-and-Instructions)
 - [Custom Cells Required for OpenRAM](#custom-cells-required-for-openram)  
-- [Prelayout Simulations](#prelayout-simulations)  
-  
-- [Future Work](#future-work)  
+- [Prelayout Simulations](#prelayout-simulations)   
+- [Future Work](#future-work) 
+- [Author](#Author)
 - [Acknowledgements](#acknowledgements)  
 - [Contact Information](#contact-information)  
 
 # Prerequisite and Instructions
-1. VSD_SRAM : To clone this repositary, downloading design files enter the following commands in your terminal.
+1. VSD_SRAM : To clone this repositary enter the following commands in your terminal.
    ~~~
        $ sudo apt install -y git
        $ git clone https://github.com/pradeepsk13/VSD_SRAM.git
    ~~~
 
-2. ngspice: An open source spice simulator for electronic circuits.For installation in Windows and Linux platform visit http://ngspice.sourceforge.net/download.html 
-       For Ubuntu enter the command below in terminal
-       
-        ~~~
+2. ngspice: An open source spice simulator for electronic circuits. For installation in Windows and Linux platform visit http://ngspice.sourceforge.net/download.html 
+       For Ubuntu enter the command below in terminal.       
+   ~~~     
         $ sudo apt-get install -y ngspice
-        ~~~
+   ~~~     
        
 3. Google-skywater130 PDK: To get the foundry open terminal and enter the following command
-      ~~~
+   ~~~
       $ git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
-      ~~~
-      Note: Copy the sky130pdk folder and paste inside prelayout folder of VSD_SRAM repo to work without changing netlist files ( You can also include library path properly in each netlist files if you wish to have library somewhere)
-4. xschem (Optional) : An EDA tool for drawing hierarchical circuit schematics and making Spice - Verilog - VHDL netlists for simulation.For installation procedure visit https://sourceforge.net/projects/xschem/. To configure and learn more on xschem, gaw waveform viewer and integrating sky130 visit https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md
+   ~~~
+      Note: Copy the sky130pdk library folder and paste inside prelayout folder of VSD_SRAM repo to work without changing netlist files ( You can also include library path properly in each netlist files if you wish to have library somewhere)
+      
+4. xschem (Optional) : An EDA tool for drawing hierarchical circuit schematics and making Spice - Verilog - VHDL netlists for simulation.For installation procedure visit https://sourceforge.net/projects/xschem/. To configure and learn more on xschem, gaw waveform viewer and integrating sky130 visit https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md .
      
 # Custom Cells Required for OpenRAM
 * SRAM Bit cell  
@@ -108,6 +108,7 @@ Stability Metrics includes,
 * Write Trip Voltage (WTV) 
 * Write Trip Current (WTI)
 * Critical Write Current (I Critical write)
+
 **1. N curve read**
 
 ![](https://github.com/pradeepsk13/VSD_SRAM/blob/master/Schematics/ncurve_read.png)
@@ -115,10 +116,10 @@ Stability Metrics includes,
 $ ngspice ncurve_read.cir
 ```
 ![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/others/ncurveread1.png)
-   SVNM = Point C - Point A = (0.82V - 0.105V) = 0.715V
-   SINM = Point B = 469uA
-   WTV  = Point E - Point C = (1.8V - 0.82V) = 0.98V
-   WTI  = Point D = 55.39uA
+   * SVNM = Point C - Point A = (0.82V - 0.105V) = 0.715V
+   * SINM = Point B = 469uA
+   * WTV  = Point E - Point C = (1.8V - 0.82V) = 0.98V
+   * WTI  = Point D = 55.39uA
    
 **2. N curve write**
 ![](https://github.com/pradeepsk13/VSD_SRAM/blob/master/Schematics/ncurve_write.png)
@@ -181,16 +182,21 @@ $ ngspice 1bitsram_write.cir
 
 
 # Future Work
-*  Creating Layouts and performing postlayout simulations.Porting sky130 technology to OpenRAM Compiler and adding the above created custom cells to it. 
+* Creating Layouts and performing postlayout simulations.Porting sky130 technology to OpenRAM Compiler and adding the above created custom cells to it. 
+
+# Author
+* Pradeepkumar S K
 
 # Acknowledgements  
 * Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
-* Yash Kumar
-* ReuelReuben
+* Philipp Gühring, Software Architect, LibreSilicon Assocation
+* Yash Kumar, VSD Teaching Assistant - laryash99@gmail.com
+* Reuel Reuben, VSD Teaching Assistant -reuel992000@gmail.com
 
 # Contact Information  
-* Pradeepkumar S K, Assistant Professor,Electronics and Communication Engineering, Kalpataru Institute of Technology, Tiptur, Karnataka.
-* E-Mail: pradeepsk13@gmail.com
+* Pradeepkumar S K, Assistant Professor,Electronics and Communication Engineering, Kalpataru Institute of Technology, Tiptur, Karnataka.  - pradeepsk13@gmail.com
+* Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. - kunalghosh@gmail.com
+* Philipp Gühring, Software Architect, LibreSilicon Assocation - pg@futureware.at
 
 
 
