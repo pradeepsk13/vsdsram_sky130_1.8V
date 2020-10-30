@@ -18,14 +18,19 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
        $ git clone https://github.com/pradeepsk13/VSD_SRAM.git
    ~~~
 
-2. ngspice: An open source spice simulator for electronic circuits. For installation in Windows and Linux platform visit http://ngspice.sourceforge.net/download.html 
+2. ngspice: An open source spice simulator for electronic circuits.For installation in Windows and Linux platform visit http://ngspice.sourceforge.net/download.html 
+       For Ubuntu enter the command below in terminal
+       
+        ~~~
+        $ sudo apt-get install -y ngspice
+        ~~~
+       
 3. Google-skywater130 PDK: To get the foundry open terminal and enter the following command
       ~~~
-      $ git clone https://foss-eda-tools.googlesource.com/skywater-pdk 
+      $ git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
       ~~~
       Note: Copy the sky130pdk folder and paste inside prelayout folder of VSD_SRAM repo to work without changing netlist files ( You can also include library path properly in each netlist files if you wish to have library somewhere)
-4. xschem (Optional) : An EDA tool for drawing hierarchical circuit schematics and making Spice - Verilog - VHDL netlists for simulation.For installation procedure visit https://sourceforge.net/projects/xschem/
-     To configure and learn more on xschem, gaw waveform viewer and integrating sky130 visit https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md
+4. xschem (Optional) : An EDA tool for drawing hierarchical circuit schematics and making Spice - Verilog - VHDL netlists for simulation.For installation procedure visit https://sourceforge.net/projects/xschem/. To configure and learn more on xschem, gaw waveform viewer and integrating sky130 visit https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md
      
 # Custom Cells Required for OpenRAM
 * SRAM Bit cell  
