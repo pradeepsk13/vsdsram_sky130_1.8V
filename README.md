@@ -205,7 +205,8 @@ $ ngspice 1bitsram_write.cir
 * Reuel Reuben, VSD Teaching Assistant -reuel992000@gmail.com
 
 # Contact Information  
-* Pradeepkumar S K, Assistant Professor,Electronics and Communication Engineering, Kalpataru Institute of Technology, Tiptur, Karnataka.  - pradeepsk13@gmail.com
+* Pradeepkumar S K, Assistant Professor,Electronics and Communication Engineering, Kalpataru Institute of Technology, Tiptur, Karnataka.     
+   - pradeepsk13@gmail.com
 * Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. - kunalghosh@gmail.com
 * Philipp Gühring, Software Architect, LibreSilicon Assocation - pg@futureware.at
 
