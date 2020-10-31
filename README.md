@@ -51,7 +51,7 @@ OpenRAM Compiler Flow : Image courtesy "Matthew R Guthaus", University of Califo
 
  To perform simulations, enter the following command to change present working directory to "prelayout". Follow later mentioned commands to simulate each netlist.
  ~~~
-   $ cd VSD_SRAM-master/Simulation/Prelayout
+   $ cd VSD_SRAM-main/Simulation/Prelayout
  ~~~
 
 ### 1. 6T SRAM Cell
