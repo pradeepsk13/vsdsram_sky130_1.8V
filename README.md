@@ -13,10 +13,10 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
 - [Contact Information](#contact-information)  
 
 # Prerequisite and Instructions
-1. VSD_SRAM : To clone this repository enter the following commands in your terminal.
+1. vsdsram_sky130_1.8V : To clone this repository enter the following commands in your terminal.
    ~~~
        $ sudo apt install -y git
-       $ git clone https://github.com/pradeepsk13/VSD_SRAM.git
+       $ git clone https://github.com/pradeepsk13/vsdsram_sky130_1.8V.git
    ~~~
 
 2. ngspice: An open source spice simulator for electronic circuits. For installation in Windows and Linux platform visit http://ngspice.sourceforge.net/download.html .
@@ -35,7 +35,7 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
      
 # Custom Cells Required for OpenRAM
 OpenRAM Compiler Flow : Image courtesy "Matthew R Guthaus", University of California, Santa Cruz.  
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/others/openram.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/openram.png)
 
 * SRAM Bit cell  
 * Sense Amplifier circuit  
@@ -44,25 +44,25 @@ OpenRAM Compiler Flow : Image courtesy "Matthew R Guthaus", University of Califo
 * D-Flip Flop
 
 # SRAM Block Diagram
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/others/SRAM_Block_Diagram.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/SRAM_Block_Diagram.png)
 
 
 #  Schematics and Prelayout Simulations
 
  To perform simulations, enter the following command to change present working directory to "prelayout". Follow later mentioned commands to simulate each netlist.
  ~~~
-   $ cd VSD_SRAM-main/Simulation/Prelayout
+   $ cd vsdsram_sky130_1.8V-main/Simulation/Prelayout
  ~~~
 
 ### 1. 6T SRAM Cell
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/SRAM_6T_Cell.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/SRAM_6T_Cell.png)
 
 **-> Read Operation**  
 ```
 $ ngspice cell6T_read.cir
 ```
 
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/cell6T_read.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/cell6T_read.png)
 
 
 **-> Write Operation**
@@ -70,7 +70,7 @@ $ ngspice cell6T_read.cir
 ```
 $ ngspice cell6T_write.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/cell6T_write.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/cell6T_write.png)
 
 
 ### 6T Cell Stability
@@ -79,32 +79,32 @@ A key figure of merit for an SRAM cell is its static noise margin (SNM). It can 
 
 **1. Hold SNM**
 
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/Hold_snm.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/Hold_snm.png)
 ```
 $ ngspice holdsnm.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/hold_snm.png)  
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/hold_snm.png)  
 By fitting a square in the upper and lower loop, we get   
 Hold SNM = min (SNMh, SNMl) = 0.7V
 
 
 
 **2. Read SNM**
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/Read_snm.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/Read_snm.png)
 ```
 $ ngspice readsnm.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/read_snm.png)  
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/read_snm.png)  
 Similarly,  
 Read SNM = min (SNMh, SNMl) = 0.49V
 
 
 **3. Write SNM**
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/Write_snm.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/Write_snm.png)
 ```
 $ ngspice writesnm.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/write_snm.png)  
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/write_snm.png)  
 By fitting the smallest square between the two curves, we get  
 Write SNM = 0.66V
 
@@ -120,76 +120,76 @@ Stability Metrics includes,
 
 **1. N curve read**
 
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/ncurve_read.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/ncurve_read.png)
 ```
 $ ngspice ncurve_read.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/others/ncurveread1.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/ncurveread1.png)
    * SVNM = Point C - Point A = (0.82V - 0.105V) = 0.715V
    * SINM = Point B = 469uA
    * WTV  = Point E - Point C = (1.8V - 0.82V) = 0.98V
    * WTI  = Point D = 55.39uA
    
 **2. N curve write**
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/ncurve_write.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/ncurve_write.png)
 ```
 $ ngspice ncurve_write.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/others/ncurvewrite1.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/ncurvewrite1.png)
 
 Write Critical Current = 131.25uA
 
 ### 2. Sense Amplifier
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/sense_amp.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/sense_amp.png)
 Run the netlist file using the following command:
 ``` 
 $ ngspice senseamp.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/sense_amplifier.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/sense_amplifier.png)
 
 
 
 ### 3. Write Driver
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/Write_driver.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/Write_driver.png)
 Run the netlist file using the following command:
 ```
 $ ngspice writedriver.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/write_driver.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/write_driver.png)
 
 
 ### 4. Tristate Buffer
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/tristate_buffer.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/tristate_buffer.png)
 Run the netlist file using the following command:
 ```
 $ ngspice tristatebuff.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/Tri_state_buffer.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/Tri_state_buffer.png)
 
 
 ### 5. Positive Edge Triggered DFF
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Schematics/D_flipflop.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/D_flipflop.png)
 Run the netlist file using the following command:
 ```
 $ ngspice dff.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/DFF.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/DFF.png)
 
 ### 1-Bit SRAM  
 
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/others/1bitsram.PNG)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/1bitsram.PNG)
 
 **-> Read Operation**
 ```
 $ ngspice 1bitsram_read.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/1bitSRAM_read.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/1bitSRAM_read.png)
 **-> Write Operation**  
   
 ```
 $ ngspice 1bitsram_write.cir
 ```
-![](https://github.com/pradeepsk13/VSD_SRAM/blob/main/Waveforms/1bitSRAM_write.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Waveforms/1bitSRAM_write.png)
 
 
 # Future Work
