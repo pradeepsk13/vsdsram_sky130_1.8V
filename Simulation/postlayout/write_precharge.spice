@@ -1,0 +1,116 @@
+* NGSPICE file created from write_precharge.ext - technology: sky130A
+
+
+**** Including Library Path *****
+
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+**** Subcircuit instantiation of magic extracted spice for simulation***
+
+
+
+X20 vdd gnd blb bl wb din write_precharge
+
+
+
+***** spice generated from Magic*******
+
+
+.subckt precharge_circuit bl gnd vdd blb
+X0 blb gnd vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X1 bl gnd vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+C0 bl blb 0.01fF
+C1 vdd blb 0.46fF
+C2 vdd bl 0.04fF
+C3 bl 0 0.14fF
+C4 blb 0 0.31fF
+C5 vdd 0 1.26fF
+C6 gnd 0 -0.01fF
+.ends
+
+.subckt write_driver blb bl gnd vdd din wb net1
+X0 net3 net1 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X1 net1 din gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X2 bl net4 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X3 net2 net1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 net4 net3 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X5 net1 din vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X6 blb net2 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X7 net5 net1 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X8 net2 wb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X9 net6 net3 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X10 net4 wb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X11 net3 net1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X12 net2 wb net5 vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X13 net4 wb net6 vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+C0 net2 blb 0.05fF
+C1 bl net4 0.05fF
+C2 net1 net5 0.06fF
+C3 din wb 0.06fF
+C4 net2 vdd 0.04fF
+C5 net1 net2 0.18fF
+C6 net3 blb 0.14fF
+C7 net4 wb 0.17fF
+C8 net4 net6 0.04fF
+C9 net3 vdd 0.12fF
+C10 net1 blb 0.07fF
+C11 net3 net1 0.09fF
+C12 wb net6 0.00fF
+C13 net1 vdd 0.21fF
+C14 bl blb 0.01fF
+C15 din net1 0.09fF
+C16 net4 blb 0.15fF
+C17 wb net2 0.38fF
+C18 net3 net4 0.03fF
+C19 net4 vdd 0.04fF
+C20 net2 net5 0.04fF
+C21 wb blb 0.56fF
+C22 net6 blb 0.02fF
+C23 net3 wb 0.15fF
+C24 net3 net6 0.01fF
+C25 net6 vdd 0.12fF
+C26 vdd net5 0.12fF
+C27 wb net1 0.34fF
+C28 net4 0 1.22fF
+C29 net6 0 0.08fF
+C30 net2 0 0.82fF
+C31 net5 0 0.08fF
+C32 net3 0 1.13fF
+C33 bl 0 0.08fF
+C34 blb 0 0.58fF
+C35 wb 0 1.02fF
+C36 din 0 0.60fF
+C37 vdd 0 1.81fF
+C38 gnd 0 -1.36fF
+C39 net1 0 1.32fF
+.ends
+
+.subckt write_precharge vdd gnd blb bl wb din
+Xprecharge_circuit_0 bl gnd vdd blb precharge_circuit
+Xwrite_driver_0 blb bl gnd vdd din wb write_driver_0/net1 write_driver
+C0 bl vdd 0.01fF
+C1 wb blb 0.00fF
+C2 blb vdd 0.27fF
+C3 blb bl 0.10fF
+C4 wb din 0.00fF
+C5 write_driver_0/net1 din -0.00fF
+C6 wb gnd 0.25fF
+C7 blb gnd 0.83fF
+C8 bl gnd 0.94fF
+C9 din gnd 0.13fF
+C10 vdd gnd 0.30fF
+.ends
+
+V1 vdd gnd dc 1.8V
+V2 wb gnd pulse 0 1.8 0 60ps 60ps 2ns 4ns
+V3 din gnd pulse 0 1.8 0 60ps 60ps 0.5ns 1ns
+
+
+.tran 0.1p 10n
+.control
+run
+plot V(wb)+6 V(din)+4 V(bl)+2 V(blb)
+.endc
+.end 
+
