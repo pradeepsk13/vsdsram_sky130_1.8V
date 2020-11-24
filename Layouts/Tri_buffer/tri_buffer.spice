@@ -1,0 +1,17 @@
+* NGSPICE file created from tri_buffer.ext - technology: sky130A
+
+.subckt tri_buffer out enb gnd in vdd en
+X0 out en net2 gnd sky130_fd_pr__nfet_01v8 w=840000u l=150000u
+X1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 w=1.26e+06u l=150000u
+X2 net2 net1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X3 out enb net2 vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X4 net1 in gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X5 net2 net1 vdd vdd sky130_fd_pr__pfet_01v8 w=1.26e+06u l=150000u
+C0 vdd net2 0.06fF
+C1 net1 net2 0.01fF
+C2 out net2 0.01fF
+C3 net1 vdd 0.04fF
+C4 out vdd 0.00fF
+C5 net1 in 0.01fF
+.ends
+
