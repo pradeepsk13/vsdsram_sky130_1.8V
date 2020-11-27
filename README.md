@@ -278,7 +278,7 @@ $ ngspice d_flipflop.spice
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/d_flipflop.png)
 
 ### 1-Bit SRAM Integrated 
-1 Bit SRAM cell along with write driver, precharge circuit and sense amplifier are integrated in a single layout in order to test for proper functionality of read and write operations after integration. Here in the below layout all custom cells are integrated without using any cell instantiation. The same integrated SRAM layout can also be created using individual custom cells by instantation which provides same functionality.
+1 Bit SRAM cell along with write driver, precharge circuit and sense amplifier are integrated in a single layout in order to test for proper functionality of read and write operations after integration. Here in the below layout all custom cells are integrated without using any cell instantiation. The same integrated SRAM layout can also be created using individual custom cells by instantiation which provides same functionality.
 
 
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/sram_ip.png)
@@ -309,7 +309,7 @@ $ ngspice sram_ip_write.spice
 * Philipp Gühring, Software Architect, LibreSilicon Assocation
 * Yash Kumar, VSD Teaching Assistant - laryash99@gmail.com
 * Reuel Reuben, VSD Teaching Assistant -reuel992000@gmail.com
-* Nickson Jose,, VSD Teaching Assistant
+* Nickson Jose, VSD Teaching Assistant
 
 # Contact Information  
 * Pradeepkumar S K, Assistant Professor,Electronics and Communication Engineering, Kalpataru Institute of Technology, Tiptur, Karnataka.     
