@@ -1,12 +1,13 @@
 # Design of 4KB Static RAM 1.8V (access time &lt;2.5ns) using OpenRAM and Sky130 node 
 The work presented here is the design of Static RAM memory of 1024 x 32 (4Kb) with less than 2.5ns access time using OpenRAM compiler and Sky130 technology node.
 Custom cells required for SRAM are designed and simulated in "ngspice". Schematics are created with "xschem" circuit editor.
-
+Layouts and Postlayout Simulations
 # Table of Contents  
 - [Prerequisite and Instructions](#Prerequisite-and-Instructions)
 - [Custom Cells Required for OpenRAM](#custom-cells-required-for-openram) 
 - [SRAM Block Diagram](#SRAM-Block-Diagram)
-- [Prelayout Simulations](#prelayout-simulations)   
+- [Prelayout Simulations](#prelayout-simulations)
+- [Layouts and Postlayout Simulations](#Layouts-and-Postlayout-Simulations)
 - [Future Work](#future-work) 
 - [Author](#Author)
 - [Acknowledgements](#acknowledgements)  
@@ -267,12 +268,12 @@ $ ngspice sram_ip_read.spice
 **-> Write Operation**  
   
 ```
-$ ngspice 1bitsram_write.cir
+$ ngspice sram_ip_write.spice
 ```
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/sram_ip_write.png)
 
 # Future Work
-* Creating Layouts and performing postlayout simulations.Porting sky130 technology to OpenRAM Compiler and adding the above created custom cells to it. 
+* Porting sky130 technology to OpenRAM Compiler and adding the above created custom cells to it. 
 
 # Author
 * Pradeepkumar S K
