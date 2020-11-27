@@ -124,7 +124,7 @@ Stability Metrics includes,
 ```
 $ ngspice ncurve_read.cir
 ```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/ncurve_read.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/ncurveread1.png)
    * SVNM = Point C - Point A = (0.82V - 0.105V) = 0.715V
    * SINM = Point B = 469uA
    * WTV  = Point E - Point C = (1.8V - 0.82V) = 0.98V
@@ -135,7 +135,7 @@ $ ngspice ncurve_read.cir
 ```
 $ ngspice ncurve_write.cir
 ```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/ncurve_write.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/ncurvewrite1.png)
 
 Write Critical Current = 131.25uA
 
