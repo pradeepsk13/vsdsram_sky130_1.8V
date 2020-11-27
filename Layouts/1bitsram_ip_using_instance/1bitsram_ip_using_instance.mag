@@ -1,0 +1,83 @@
+magic
+tech sky130A
+timestamp 1606474804
+<< locali >>
+rect 2615 140 2793 160
+rect 2615 85 2635 140
+rect 2935 109 2955 140
+rect 2454 65 2635 85
+rect 2930 103 2959 109
+rect 2930 86 2936 103
+rect 2953 86 2959 103
+rect 2930 80 2959 86
+rect 1293 10 1574 30
+rect 1762 10 2157 30
+rect 2425 15 2828 35
+<< viali >>
+rect 2936 86 2953 103
+<< metal1 >>
+rect 2072 611 2092 676
+rect 1567 610 2092 611
+rect 1288 590 2092 610
+rect 1272 330 1406 351
+rect 1385 250 1406 330
+rect 1585 320 1605 590
+rect 2430 470 2450 679
+rect 2430 450 2802 470
+rect 2068 271 2455 290
+rect 2068 255 2087 271
+rect 1385 230 1491 250
+rect 1674 235 2087 255
+rect 1276 190 1880 210
+rect 1860 90 1880 190
+rect 1822 70 2156 90
+rect 2435 85 2455 271
+rect 2930 105 2959 109
+rect 2715 103 2959 105
+rect 2715 86 2936 103
+rect 2953 86 2959 103
+rect 2715 85 2959 86
+rect 2070 -55 2090 70
+rect 2715 -55 2735 85
+rect 2930 80 2959 85
+rect 2070 -75 2735 -55
+use sense_amp  sense_amp_0
+timestamp 1605174403
+transform 1 0 2794 0 1 55
+box -29 -52 577 452
+use sram_6t_cell  sram_6t_cell_0
+timestamp 1605371449
+transform 1 0 1586 0 1 218
+box 485 -219 882 529
+use precharge_circuit  precharge_circuit_0
+timestamp 1605358274
+transform 1 0 1550 0 1 74
+box -69 -75 296 285
+use write_driver  write_driver_0
+timestamp 1606127284
+transform 1 0 -47 0 1 -115
+box 47 115 1341 771
+<< labels >>
+flabel locali s 3251 155 3261 162 0 FreeSans 400 0 0 0 rd_en
+port 0 nsew
+flabel locali s 3330 232 3340 239 0 FreeSans 400 0 0 0 dout
+port 1 nsew
+flabel metal1 s 1373 336 1383 343 0 FreeSans 400 0 0 0 blb
+port 2 nsew
+flabel metal1 s 1387 195 1397 202 0 FreeSans 400 0 0 0 bl
+port 3 nsew
+flabel metal1 s 104 13 114 20 0 FreeSans 400 0 0 0 gnd
+port 4 nsew
+flabel metal1 s 91 594 101 601 0 FreeSans 400 0 0 0 vdd
+port 5 nsew
+flabel metal1 s 76 248 86 255 0 FreeSans 400 0 0 0 wb
+port 6 nsew
+flabel metal1 s 9 196 19 203 0 FreeSans 400 0 0 0 din
+port 7 nsew
+flabel locali s 2139 151 2149 158 0 FreeSans 400 0 0 0 wl
+port 8 nsew
+flabel locali s 2364 465 2373 475 0 FreeSans 400 0 0 0 qb
+port 9 nsew
+flabel locali s 2313 533 2322 543 0 FreeSans 400 0 0 0 q
+port 10 nsew
+<< end >>

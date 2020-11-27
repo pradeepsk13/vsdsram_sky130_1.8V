@@ -1,0 +1,58 @@
+timestamp 1605174403
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 1e+06
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w
+parameters sky130_fd_pr__pfet_01v8 l=l w=w
+port "bl" 3 146 90 154 101 li
+port "blb" 2 -19 90 -11 101 li
+port "rd_en" 4 458 84 466 95 li
+port "dout" 6 538 154 546 160 li
+port "vdd" 0 139 400 169 415 m1
+port "gnd" 1 273 -44 309 -25 m1
+node "net2" 1540 929.802 15 20 ndif 0 0 0 0 0 0 0 0 8280 638 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11772 1146 9483 712 0 0 0 0 0 0 0 0 0 0
+node "bl" 592 298.447 146 90 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3369 436 0 0 1089 132 0 0 0 0 0 0 0 0 0 0 0 0
+node "blb" 572 281.861 -19 90 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3279 424 0 0 1089 132 0 0 0 0 0 0 0 0 0 0 0 0
+node "rd_en" 927 421.816 458 84 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4929 644 0 0 1089 132 0 0 0 0 0 0 0 0 0 0 0 0
+node "dout" 566 363.153 538 154 li 0 0 0 0 0 0 0 0 1680 164 2200 190 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6428 640 870 118 0 0 0 0 0 0 0 0 0 0
+node "net3" 2114 922.523 245 20 ndif 0 0 0 0 0 0 0 0 1680 164 4000 280 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6234 818 0 0 12196 1140 0 0 0 0 0 0 0 0 0 0 0 0
+node "net1" 2060 718.742 60 186 p 0 0 0 0 0 0 0 0 1680 164 2200 190 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7554 994 0 0 6387 664 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 8545 2529.76 139 400 m1 0 0 0 0 131357 1614 0 0 11236 848 9450 690 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 29003 2094 19107 1224 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 273 -44 m1 0 0 0 0 0 0 0 0 5890 454 6724 656 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24898 1690 19140 1226 0 0 0 0 0 0 0 0 0 0
+cap "dout" "vdd" 52.8873
+cap "net2" "net1" 226.677
+cap "vdd" "net3" 194.894
+cap "bl" "net1" 84.3088
+cap "rd_en" "vdd" 3.54362
+cap "bl" "net2" 89.5213
+cap "net3" "net1" 66.055
+cap "dout" "net2" 34.6684
+cap "net2" "net3" 351.602
+cap "blb" "net1" 15.5009
+cap "bl" "net3" 11.967
+cap "net2" "rd_en" 12.375
+cap "vdd" "net1" 70.6329
+cap "dout" "net3" 19.1053
+cap "net2" "blb" 83.6516
+cap "bl" "rd_en" 2.89916
+cap "net2" "vdd" 24.7865
+cap "dout" "rd_en" 21.3529
+cap "bl" "blb" 22.1201
+cap "rd_en" "net3" 110.468
+device msubckt sky130_fd_pr__nfet_01v8 502 20 503 21 l=15 w=42 "gnd" "net3" 30 0 "gnd" 42 0 "dout" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 364 20 365 21 l=15 w=100 "gnd" "rd_en" 30 0 "net2" 100 0 "gnd" 100 0
+device msubckt sky130_fd_pr__nfet_01v8 230 20 231 21 l=15 w=42 "gnd" "bl" 30 0 "net2" 42 0 "net3" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 60 20 61 21 l=15 w=42 "gnd" "blb" 30 0 "net2" 42 0 "net1" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 502 246 503 247 l=15 w=55 "vdd" "net3" 30 0 "vdd" 55 0 "dout" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 230 246 231 247 l=15 w=100 "vdd" "net1" 30 0 "vdd" 100 0 "net3" 100 0
+device msubckt sky130_fd_pr__pfet_01v8 60 246 61 247 l=15 w=55 "vdd" "net1" 30 0 "vdd" 55 0 "net1" 55 0
+subcap "net2" -321.662
+subcap "bl" -11.4632
+subcap "blb" -27.9296
+subcap "rd_en" -76.9183
+subcap "dout" -81.3505
+subcap "net3" -83.9401
+subcap "net1" -31.4398
+subcap "vdd" -203.112

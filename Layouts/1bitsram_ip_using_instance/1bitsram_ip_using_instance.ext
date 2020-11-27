@@ -1,0 +1,116 @@
+timestamp 1606474804
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 1e+06
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use sense_amp sense_amp_0 1 0 2794 0 1 55
+use sram_6t_cell sram_6t_cell_0 1 0 1586 0 1 218
+use precharge_circuit precharge_circuit_0 1 0 1550 0 1 74
+use write_driver write_driver_0 1 0 -47 0 1 -115
+port "q" 10 2313 533 2322 543 li
+port "qb" 9 2364 465 2373 475 li
+port "wl" 8 2139 151 2149 158 li
+port "din" 7 9 196 19 203 m1
+port "wb" 6 76 248 86 255 m1
+port "vdd" 5 91 594 101 601 m1
+port "gnd" 4 104 13 114 20 m1
+port "dout" 1 3330 232 3340 239 li
+port "rd_en" 0 3251 155 3261 162 li
+port "blb" 2 1373 336 1383 343 m1
+port "bl" 3 1387 195 1397 202 m1
+node "q" 0 0 2313 533 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "qb" 0 0 2364 465 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "wl" 0 0 2139 151 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "din" 0 0 9 196 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "wb" 0 0 76 248 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 0 0 91 594 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 0 0 104 13 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "dout" 0 0 3330 232 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "rd_en" 0 0 3251 155 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_1674_235#" 6 888.686 1674 235 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19637 2044 0 0 0 0 0 0 0 0 0 0
+node "m1_2430_450#" 4 523.032 2430 450 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11620 1202 0 0 0 0 0 0 0 0 0 0
+node "blb" 2 295.996 1373 336 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6614 680 0 0 0 0 0 0 0 0 0 0
+node "m1_1288_590#" 7 1011.79 1288 590 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23305 2320 0 0 0 0 0 0 0 0 0 0
+node "li_2425_15#" 246 495.122 2425 15 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8060 846 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_1762_10#" 241 485.73 1762 10 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7900 830 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_1293_10#" 171 351.894 1293 10 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5620 602 0 0 0 0 0 0 0 0 0 0 0 0
+node "bl" 52 2011.36 1387 195 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1461 178 44501 4482 0 0 0 0 0 0 0 0 0 0
+node "li_2454_65#" 253 508.036 2454 65 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8280 868 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "$SUB" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "li_1293_10#" "li_1762_10#" 3.51064
+cap "m1_1674_235#" "li_2454_65#" 0.94
+cap "bl" "m1_1288_590#" 8.18182
+cap "m1_1288_590#" "blb" 7.7933
+cap "m1_1674_235#" "bl" 470.418
+cap "m1_1674_235#" "blb" 3.68852
+cap "m1_2430_450#" "m1_1674_235#" 7.03125
+cap "li_1762_10#" "bl" 42.16
+cap "li_2425_15#" "li_2454_65#" 248.757
+cap "bl" "blb" 279.375
+cap "bl" "li_2425_15#" 42.16
+subcap "m1_1288_590#" -235.634
+subcap "bl" -1787.87
+cap "write_driver_0/gnd" "bl" 0.294118
+cap "bl" "blb" 0.0535714
+cap "write_driver_0/vdd" "blb" 5.59807
+subcap "wl" -65.5883
+subcap "m1_1674_235#" -129.972
+subcap "bl" -1257.75
+cap "bl" "blb" 506.872
+cap "sram_6t_cell_0/vdd" "blb" 202.695
+cap "bl" "sram_6t_cell_0/vdd" 201.237
+cap "sram_6t_cell_0/gnd" "blb" 28.85
+cap "bl" "sram_6t_cell_0/gnd" 147.892
+subcap "m1_2430_450#" -636.086
+cap "sense_amp_0/net1" "sense_amp_0/blb" -8.88178e-16
+cap "sense_amp_0/bl" "sense_amp_0/blb" 6.88064
+cap "q" "sense_amp_0/blb" 55.722
+cap "sense_amp_0/bl" "sram_6t_cell_0/gnd" 328.126
+cap "qb" "sense_amp_0/blb" 113.881
+cap "sram_6t_cell_0/gnd" "sense_amp_0/blb" 371.499
+cap "sense_amp_0/net2" "sense_amp_0/blb" 5.44104
+cap "qb" "sense_amp_0/vdd" 28.3696
+cap "wl" "sram_6t_cell_0/gnd" 6.46392
+cap "sense_amp_0/bl" "sense_amp_0/gnd" 191.026
+cap "sense_amp_0/net3" "sense_amp_0/bl" 20.1501
+cap "sense_amp_0/blb" "sense_amp_0/net2" 5.44104
+cap "sense_amp_0/blb" "sense_amp_0/net1" -1.77636e-15
+cap "sense_amp_0/bl" "sense_amp_0/net2" 265.484
+cap "sense_amp_0/blb" "sense_amp_0/bl" 15.45
+cap "sense_amp_0/bl" "sense_amp_0/net1" 174.911
+subcap "m1_1288_590#" -1004.46
+subcap "m1_1288_590#" -979.741
+subcap "q" -200.166
+subcap "qb" -589.824
+merge "sense_amp_0/gnd" "li_2425_15#" -226.06 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4860 -382 0 0 0 0 0 0 0 0 0 0 0 0
+merge "li_2425_15#" "sram_6t_cell_0/gnd"
+merge "sram_6t_cell_0/gnd" "li_1762_10#"
+merge "li_1762_10#" "precharge_circuit_0/gnd"
+merge "precharge_circuit_0/gnd" "li_1293_10#"
+merge "li_1293_10#" "write_driver_0/gnd"
+merge "write_driver_0/gnd" "gnd"
+merge "gnd" "$SUB"
+merge "sram_6t_cell_0/vdd" "write_driver_0/vdd" -471.812 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -219923 -158 0 0 0 0 0 0 0 0 0 0
+merge "write_driver_0/vdd" "vdd"
+merge "vdd" "precharge_circuit_0/vdd"
+merge "precharge_circuit_0/vdd" "m1_1288_590#"
+merge "m1_1288_590#" "sense_amp_0/vdd"
+merge "sense_amp_0/vdd" "m1_2430_450#"
+merge "sram_6t_cell_0/blb" "sense_amp_0/blb" -250.084 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -460 -140 2283 -150 0 0 0 0 0 0 0 0 0 0
+merge "sense_amp_0/blb" "li_2454_65#"
+merge "li_2454_65#" "write_driver_0/blb"
+merge "write_driver_0/blb" "precharge_circuit_0/blb"
+merge "precharge_circuit_0/blb" "blb"
+merge "blb" "m1_1674_235#"
+merge "sram_6t_cell_0/wl" "wl" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sram_6t_cell_0/q" "q" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sense_amp_0/bl" "precharge_circuit_0/bl" -327.816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 575 -50 1880 -214 0 0 0 0 0 0 0 0 0 0
+merge "precharge_circuit_0/bl" "sram_6t_cell_0/bl"
+merge "sram_6t_cell_0/bl" "write_driver_0/bl"
+merge "write_driver_0/bl" "bl"
+merge "write_driver_0/wb" "wb" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sense_amp_0/rd_en" "rd_en" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sense_amp_0/dout" "dout" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "write_driver_0/din" "din" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sram_6t_cell_0/qb" "qb" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

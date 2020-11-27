@@ -1,0 +1,159 @@
+* NGSPICE file created from 1bitsram_ip_using_instance.ext - technology: sky130A
+
+.subckt precharge_circuit bl gnd vdd blb
+X0 blb gnd vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X1 bl gnd vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+C0 blb vdd 0.46fF
+C1 vdd bl 0.04fF
+C2 blb bl 0.01fF
+C3 bl 0 0.14fF
+C4 blb 0 0.31fF
+C5 vdd 0 1.26fF
+C6 gnd 0 -0.01fF
+.ends
+
+.subckt sense_amp vdd gnd blb bl rd_en dout net1 net2 net3
+X0 net3 net1 vdd vdd sky130_fd_pr__pfet_01v8 w=1e+06u l=150000u
+X1 dout net3 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X2 net1 net1 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X3 net1 blb net2 gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 gnd rd_en net2 gnd sky130_fd_pr__nfet_01v8 w=1e+06u l=150000u
+X5 net3 bl net2 gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X6 dout net3 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+C0 rd_en vdd 0.00fF
+C1 net3 net1 0.07fF
+C2 dout net2 0.03fF
+C3 rd_en net3 0.11fF
+C4 dout vdd 0.05fF
+C5 net2 bl 0.09fF
+C6 net2 vdd 0.02fF
+C7 net3 dout 0.02fF
+C8 net2 blb 0.08fF
+C9 bl blb 0.02fF
+C10 net1 net2 0.23fF
+C11 rd_en dout 0.02fF
+C12 net1 bl 0.08fF
+C13 net3 net2 0.35fF
+C14 net3 bl 0.01fF
+C15 net1 vdd 0.07fF
+C16 rd_en net2 0.01fF
+C17 net3 vdd 0.19fF
+C18 rd_en bl 0.00fF
+C19 net1 blb 0.02fF
+C20 bl 0 0.29fF
+C21 blb 0 0.25fF
+C22 rd_en 0 0.34fF
+C23 dout 0 0.28fF
+C24 vdd 0 2.33fF
+C25 net2 0 0.61fF
+C26 net3 0 0.84fF
+C27 net1 0 0.69fF
+.ends
+
+.subckt write_driver blb bl gnd vdd din wb
+X0 net3 net1 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X1 net1 din gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X2 net2 net1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X3 net4 net3 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 blb net2 gnd gnd sky130_fd_pr__nfet_01v8 w=840000u l=150000u
+X5 net1 din vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X6 net5 net1 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X7 net2 wb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X8 net6 net3 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X9 net4 wb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X10 bl net4 gnd gnd sky130_fd_pr__nfet_01v8 w=840000u l=150000u
+X11 net3 net1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X12 net2 wb net5 vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X13 net4 wb net6 vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+C0 blb net1 0.07fF
+C1 net3 net4 0.03fF
+C2 net3 blb 0.14fF
+C3 net5 net1 0.06fF
+C4 net6 net3 0.01fF
+C5 wb net4 0.17fF
+C6 wb blb 0.55fF
+C7 net3 net1 0.09fF
+C8 net6 wb 0.00fF
+C9 wb net1 0.33fF
+C10 wb net3 0.15fF
+C11 vdd net4 0.04fF
+C12 net6 vdd 0.12fF
+C13 vdd net5 0.12fF
+C14 vdd net1 0.21fF
+C15 vdd net3 0.12fF
+C16 net2 blb 0.05fF
+C17 net5 net2 0.04fF
+C18 net2 net1 0.17fF
+C19 din net1 0.09fF
+C20 net4 bl 0.05fF
+C21 bl blb 0.01fF
+C22 wb net2 0.37fF
+C23 wb din 0.02fF
+C24 vdd net2 0.04fF
+C25 net4 blb 0.15fF
+C26 net6 net4 0.04fF
+C27 net6 blb 0.02fF
+C28 net4 0 1.21fF
+C29 net6 0 0.08fF
+C30 net2 0 0.82fF
+C31 net5 0 0.08fF
+C32 net3 0 1.13fF
+C33 net1 0 1.32fF
+C34 bl 0 0.08fF
+C35 blb 0 0.58fF
+C36 wb 0 1.02fF
+C37 din 0 0.60fF
+C38 vdd 0 1.81fF
+C39 gnd 0 -1.29fF
+.ends
+
+.subckt sram_6t_cell vdd gnd wl bl blb q qb
+X0 qb q vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X1 q qb vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X2 qb q gnd gnd sky130_fd_pr__nfet_01v8 w=1.26e+06u l=150000u
+X3 qb wl blb gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 q qb gnd gnd sky130_fd_pr__nfet_01v8 w=1.26e+06u l=150000u
+X5 q wl bl gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+C0 wl qb 0.00fF
+C1 vdd qb 0.13fF
+C2 bl q 0.05fF
+C3 wl q 0.01fF
+C4 qb q 0.34fF
+C5 blb bl 0.02fF
+C6 vdd q 0.13fF
+C7 wl blb 0.00fF
+C8 qb blb 0.05fF
+C9 wl bl 0.04fF
+C10 blb 0 0.16fF
+C11 bl 0 0.18fF
+C12 wl 0 0.35fF
+C13 q 0 0.72fF
+C14 qb 0 0.83fF
+C15 vdd 0 -0.64fF
+.ends
+
+.subckt bitsram_ip_using_instance rd_en dout blb bl gnd vdd wb din wl qb q
+Xprecharge_circuit_0 bl gnd vdd blb precharge_circuit
+Xsense_amp_0 vdd gnd blb bl rd_en dout sense_amp_0/net1 sense_amp_0/net2 sense_amp_0/net3
++ sense_amp
+Xwrite_driver_0 blb bl gnd vdd din wb write_driver
+Xsram_6t_cell_0 vdd gnd wl bl blb q qb sram_6t_cell
+C0 bl sense_amp_0/net2 0.27fF
+C1 blb vdd 0.22fF
+C2 sense_amp_0/net1 blb -0.00fF
+C3 bl sense_amp_0/net3 0.02fF
+C4 blb q 0.06fF
+C5 blb sense_amp_0/net2 0.01fF
+C6 bl vdd 0.21fF
+C7 bl sense_amp_0/net1 0.17fF
+C8 vdd qb 0.03fF
+C9 bl blb 1.28fF
+C10 blb qb 0.11fF
+C11 vdd gnd -1.32fF
+C12 wl gnd -0.06fF
+C13 q gnd -0.20fF
+C14 qb gnd -0.59fF
+C15 bl gnd -0.28fF
+C16 blb gnd 2.21fF
+.ends
+
