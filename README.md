@@ -1,7 +1,7 @@
 # Design of 4KB Static RAM 1.8V (access time &lt;2.5ns) using OpenRAM and Sky130 node 
 The work presented here is the design of Static RAM memory of 1024 x 32 (4Kb) with less than 2.5ns access time using OpenRAM compiler and Sky130 technology node.
-Custom cells required for SRAM are designed and simulated in "ngspice". Schematics are created with "xschem" circuit editor.
-Layouts and Postlayout Simulations
+Custom cells required for SRAM are designed and simulated in "ngspice". Schematics are created with "xschem" circuit editor. "Magic" Layout tool for creating custom Layouts and for RC extraction. 
+
 # Table of Contents  
 - [Prerequisite and Instructions](#Prerequisite-and-Instructions)
 - [Custom Cells Required for OpenRAM](#custom-cells-required-for-openram) 
