@@ -6,7 +6,7 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
 - [Prerequisite and Instructions](#Prerequisite-and-Instructions)
 - [Custom Cells Required for OpenRAM](#custom-cells-required-for-openram) 
 - [SRAM Block Diagram](#SRAM-Block-Diagram)
-- [Prelayout Simulations](#prelayout-simulations)
+- [Schematics and Prelayout Simulations](#Schematics-and-Prelayout-Simulations)
 - [Layouts and Postlayout Simulations](#Layouts-and-Postlayout-Simulations)
 - [Future Work](#future-work) 
 - [Author](#Author)
