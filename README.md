@@ -201,141 +201,75 @@ $ ngspice 1bitsram_write.cir
  ~~~
 
 ### 1. 6T SRAM Cell
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/SRAM_6T_Cell.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/sram_6t_cell.png)
 
 **-> Read Operation**  
 ```
-$ ngspice cell6T_read.cir
+$ ngspice sram_6t_cell_read.spice
 ```
 
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/cell6T_read.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/sram_6t_cell_read.png)
 
 
 **-> Write Operation**
   
 ```
-$ ngspice cell6T_write.cir
+$ ngspice sram_6t_cell_write.spice
 ```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/cell6T_write.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/sram_6t_cell_write.png)
 
-
-### 6T Cell Stability
-#### **-> Static Noise Margin Calculation**
-A key figure of merit for an SRAM cell is its static noise margin (SNM). It can be extracted by nesting the largest possible square in the two voltage transfer curves (VTC) of the involved CMOS inverters.The SNM is defined as the side-length of the square, given in volts. When an external DC noise is larger than the SNM, the state of the SRAM cell can change and data is lost.
-
-**1. Hold SNM**
-
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/Hold_snm.png)
-```
-$ ngspice holdsnm.cir
-```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/hold_snm.png)  
-By fitting a square in the upper and lower loop, we get   
-Hold SNM = min (SNMh, SNMl) = 0.7V
-
-
-
-**2. Read SNM**
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/Read_snm.png)
-```
-$ ngspice readsnm.cir
-```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/read_snm.png)  
-Similarly,  
-Read SNM = min (SNMh, SNMl) = 0.49V
-
-
-**3. Write SNM**
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/Write_snm.png)
-```
-$ ngspice writesnm.cir
-```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/write_snm.png)  
-By fitting the smallest square between the two curves, we get  
-Write SNM = 0.66V
-
-
-#### **-> N-Curve**  
-N-curve provides the current flow information along with the voltage metrics which is equally important for an overall analysis of cell stability.
-Stability Metrics includes,
-* Static Voltage Noise Margin (SVNM)  
-* Static Current Noise Margin (SINM)
-* Write Trip Voltage (WTV) 
-* Write Trip Current (WTI)
-* Critical Write Current (I Critical write)
-
-**1. N curve read**
-
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/ncurve_read.png)
-```
-$ ngspice ncurve_read.cir
-```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/ncurveread1.png)
-   * SVNM = Point C - Point A = (0.82V - 0.105V) = 0.715V
-   * SINM = Point B = 469uA
-   * WTV  = Point E - Point C = (1.8V - 0.82V) = 0.98V
-   * WTI  = Point D = 55.39uA
-   
-**2. N curve write**
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/ncurve_write.png)
-```
-$ ngspice ncurve_write.cir
-```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/ncurvewrite1.png)
-
-Write Critical Current = 131.25uA
 
 ### 2. Sense Amplifier
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/sense_amp.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/sense_amp.png)
 Run the netlist file using the following command:
 ``` 
-$ ngspice senseamp.cir
+$ ngspice sense_amp.spice
 ```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/sense_amplifier.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/sense_amp.png)
 
 
 
 ### 3. Write Driver
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/Write_driver.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/write_driver.png)
 Run the netlist file using the following command:
 ```
-$ ngspice writedriver.cir
+$ ngspice write_precharge.spice
 ```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/write_driver.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/write_ckt.png)
 
 
 ### 4. Tristate Buffer
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/tristate_buffer.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/tristatebuffer.png)
 Run the netlist file using the following command:
 ```
-$ ngspice tristatebuff.cir
+$ ngspice tristatebuffer.spice
 ```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/Tri_state_buffer.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/tristatebuffer.png)
 
 
 ### 5. Positive Edge Triggered DFF
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/D_flipflop.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/d_flipflop.png)
 Run the netlist file using the following command:
 ```
-$ ngspice dff.cir
+$ ngspice d_flipflop.spice
 ```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/DFF.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/d_flipflop.png)
 
-### 1-Bit SRAM  
+### 1-Bit SRAM Integrated 
 
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/1bitsram.PNG)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/sram_ip.png)
 
 **-> Read Operation**
 ```
-$ ngspice 1bitsram_read.cir
+$ ngspice sram_ip_read.spice
 ```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/1bitSRAM_read.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/sram_ip_read.png)
 **-> Write Operation**  
   
 ```
 $ ngspice 1bitsram_write.cir
 ```
-![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/prelayout/1bitSRAM_write.png)
+![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/sram_ip_write.png)
 
 # Future Work
 * Creating Layouts and performing postlayout simulations.Porting sky130 technology to OpenRAM Compiler and adding the above created custom cells to it. 
