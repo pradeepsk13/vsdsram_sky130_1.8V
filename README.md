@@ -135,7 +135,7 @@ $ ngspice ncurve_read.cir
    * SVNM = Point C - Point A = (0.82V - 0.105V) = 0.715V
    * SINM = Point B = 469uA
    * WTV  = Point E - Point C = (1.8V - 0.82V) = 0.98V
-   * WTI  = Point D = 55.39uA
+   * WTI  = Point D = -55.39uA
    
 **2. N curve write**
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/Schematics/ncurve_write.png)
