@@ -33,6 +33,10 @@ Layouts and Postlayout Simulations
       Note: Copy the sky130pdk library folder and paste inside cloned vsdsram_sky130_1.8V repo folder to work without changing netlist files ( You can also include library path in each netlist files accordingly, if you wish to have library somewhere)
       
 4. xschem (Optional) : An EDA tool for drawing hierarchical circuit schematics and making Spice - Verilog - VHDL netlists for simulation.For installation procedure visit https://sourceforge.net/projects/xschem/. To configure and learn more on xschem, gaw waveform viewer and integrating sky130 visit https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md .
+
+5. Magic Layout EDA & sky130A : Magic installation and for linking required technology files for sky130 follow any one of the procedure.
+             (i) To download magic layout tool and installing sky130 tech files to work with magic, visit http://www.opencircuitdesign.com/open_pdks/install.html which                          provides detail procedures.
+             (ii) Enroll for Udemy free course by Kunal Ghosh and Nickson Jose on "VSD - A complete guide to install Openlane and Sky130nm PDK" by visiting the link https://www.udemy.com/course/vsd-a-complete-guide-to-install-openlane-and-sky130nm-pdk/ . This free course guides with complete installation of openlane (RTL to GDSII) along with required magic EDA by configuring sky130A latest libraries.
      
 # Custom Cells Required for OpenRAM
 OpenRAM Compiler Flow : Image courtesy "Matthew R Guthaus", University of California, Santa Cruz.  
@@ -204,6 +208,8 @@ $ ngspice 1bitsram_write.cir
 ### 1. 6T SRAM Cell
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/sram_6t_cell.png)
 
+Layout Area: 29.70 um^2 
+
 **-> Read Operation**  
 ```
 $ ngspice sram_6t_cell_read.spice
@@ -222,6 +228,10 @@ $ ngspice sram_6t_cell_write.spice
 
 ### 2. Sense Amplifier
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/sense_amp.png)
+
+
+Layout Area: 30.54 um^2 
+
 Run the netlist file using the following command:
 ``` 
 $ ngspice sense_amp.spice
@@ -232,6 +242,9 @@ $ ngspice sense_amp.spice
 
 ### 3. Write Driver
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/write_driver.png)
+
+Layout Area: 84.89 um^2 
+
 Run the netlist file using the following command:
 ```
 $ ngspice write_precharge.spice
@@ -241,6 +254,9 @@ $ ngspice write_precharge.spice
 
 ### 4. Tristate Buffer
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/tristatebuffer.png)
+
+Layout Area: 23.18 um^2 
+
 Run the netlist file using the following command:
 ```
 $ ngspice tristatebuffer.spice
@@ -250,6 +266,9 @@ $ ngspice tristatebuffer.spice
 
 ### 5. Positive Edge Triggered DFF
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/d_flipflop.png)
+
+Layout Area: 60.25 um^2 
+
 Run the netlist file using the following command:
 ```
 $ ngspice d_flipflop.spice
@@ -257,8 +276,12 @@ $ ngspice d_flipflop.spice
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/d_flipflop.png)
 
 ### 1-Bit SRAM Integrated 
+1 Bit SRAM cell along with write driver, precharge circuit and sense amplifier are integrated in a single layout in order to test for proper functionality of read and write operations after integration. Here in the below layout all custom cells are integrated without using any cell instantiation. The same integrated SRAM layout can also be created using individual custom cells by instantation which provides same functionality.
+
 
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/others/layout_snaps/sram_ip.png)
+
+Layout Area: 106.69 um^2 
 
 **-> Read Operation**
 ```
@@ -280,9 +303,11 @@ $ ngspice sram_ip_write.spice
 
 # Acknowledgements  
 * Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
+* Matthew R. Guthaus, University of California, Santa Cruz.
 * Philipp Gühring, Software Architect, LibreSilicon Assocation
 * Yash Kumar, VSD Teaching Assistant - laryash99@gmail.com
 * Reuel Reuben, VSD Teaching Assistant -reuel992000@gmail.com
+* Nickson Jose,, VSD Teaching Assistant
 
 # Contact Information  
 * Pradeepkumar S K, Assistant Professor,Electronics and Communication Engineering, Kalpataru Institute of Technology, Tiptur, Karnataka.     
