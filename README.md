@@ -34,9 +34,11 @@ Custom cells required for SRAM are designed and simulated in "ngspice". Schemati
       
 4. xschem (Optional) : An EDA tool for drawing hierarchical circuit schematics and making Spice - Verilog - VHDL netlists for simulation.For installation procedure visit https://sourceforge.net/projects/xschem/. To configure and learn more on xschem, gaw waveform viewer and integrating sky130 visit https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md .
 
-5. Magic Layout EDA & sky130A : Magic installation and for linking required technology files for sky130 follow any one of the procedure.           
-              *To download magic layout tool and installing sky130 tech files to work with magic, visit http://www.opencircuitdesign.com/open_pdks/install.html which                          provides detail procedures.
-             *Enroll for Udemy free course by Kunal Ghosh and Nickson Jose on "VSD - A complete guide to install Openlane and Sky130nm PDK" by visiting the link                             https://www.udemy.com/course/vsd-a-complete-guide-to-install-openlane-and-sky130nm-pdk/ .This free course guides with complete installation of openlane (RTL to GDSII) along with required magic EDA by configuring sky130A latest libraries.
+5. Magic Layout EDA & sky130A : Magic installation and for linking required technology files for sky130 follow any one of the procedure.  
+*  To download magic layout tool and installing sky130 tech files to work with magic, visit http://www.opencircuitdesign.com/open_pdks/install.html which                          provides detail procedures.
+*  Enroll for Udemy free course by Kunal Ghosh and Nickson Jose on "VSD - A complete guide to install Openlane and Sky130nm PDK" by visiting the link                             https://www.udemy.com/course/vsd-a-complete-guide-to-install-openlane-and-sky130nm-pdk/ .This free course guides with complete installation of openlane (RTL to GDSII) along with required magic EDA by configuring sky130A latest libraries.
+             
+              
      
 # Custom Cells Required for OpenRAM
 OpenRAM Compiler Flow : Image courtesy "Matthew R Guthaus", University of California, Santa Cruz.  
