@@ -1,0 +1,47 @@
+
+
+d_flipflop:
+----------width x height----------------------area (um^2)
+
+microns:   12.71 x 4.74                         60.25   
+
+
+
+precharge_circuit:
+----------width x height----------------------area (um^2)
+
+microns:    3.65 x 3.60                         13.14  
+
+
+
+sense_amp
+----------width x height----------------------area (um^2)
+
+microns:    6.06 x 5.04                         30.54   
+
+
+
+sram_6t_cell
+----------width x height----------------------area (um^2)
+
+microns:    3.97 x 7.48                         29.70  
+
+
+
+tristatebuffer
+----------width x height----------------------area (um^2)
+
+microns:    4.86 x 4.77                         23.18  
+
+
+
+write_driver
+----------width x height----------------------area (um^2)
+
+microns:   12.94 x 6.56                         84.89 
+
+
+sram_ip
+----------width x height----------------------area (um^2)
+
+microns:   14.34 x 7.44                        106.69
