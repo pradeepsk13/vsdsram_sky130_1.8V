@@ -1,0 +1,27 @@
+Read SNM Calculation
+
+.lib "../../sky130_fd_pr/models/sky130.lib.spice" tt
+
+ 
+XM1 qb1 q1 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W= 1.26
+XM2 qb1 q1 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55 
+
+XM3 q2 qb2 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W= 1.26
+XM4 q2 qb2 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W= 0.55
+
+*****Access Transistors******
+XM5 qb1 vdd vdd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM6 q2 vdd vdd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+
+
+V1 vdd gnd 1.8V
+V2 q1 gnd dc 1.8V
+V3 qb2 gnd dc 1.8V
+.dc V2 0 1.8 0.01 V3 0 1.8 0.01
+
+.control
+run
+plot V(qb1) vs V(q1) V(qb2) vs V(q2) 
+
+.endc
+.END

@@ -1,0 +1,26 @@
+Tristate Buffer
+
+.lib "../../sky130_fd_pr/models/sky130.lib.spice" tt
+
+XM1 inb in gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM2 inb in vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1.26
+
+XM3 2 inb gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM4 2 inb vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1.26
+
+
+XM5 2 en out gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+XM6 2 enb out vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55
+
+XM7 out enb gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
+
+V1 vdd gnd 1.8v
+Vin in 0 pulse(0 1.8 0 10ps 10ps 0.5ns 1ns)
+Ven en 0 pulse(0 1.8 0 10ps 10ps 2ns 4ns)
+Venb enb 0 pulse(1.8 0 0 10ps 10ps 2ns 4ns)
+.tran 0.1p 10n
+.control 
+run  
+plot V(en)+6 V(enb)+4 V(in)+2 V(out)
+.endc
+.end
