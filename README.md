@@ -303,7 +303,7 @@ $ ngspice sram_ip_write.spice
 ![](https://github.com/pradeepsk13/vsdsram_sky130_1.8V/blob/main/waveforms/postlayout/sram_ip_write.png)
 
 # Future Work
-* Porting sky130 technology to OpenRAM Compiler and adding the above created custom cells to it. 
+* Optimize layouts for PNR and Porting sky130 technology to OpenRAM Compiler and adding the above created custom cells to it. 
 
 # Author
 * Pradeepkumar S K
