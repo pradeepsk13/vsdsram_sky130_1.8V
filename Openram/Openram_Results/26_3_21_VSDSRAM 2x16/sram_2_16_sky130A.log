@@ -1,0 +1,90 @@
+|==============================================================================|
+|=========                      OpenRAM v1.1.14                       =========|
+|=========                                                            =========|
+|=========               VLSI Design and Automation Lab               =========|
+|=========        Computer Science and Engineering Department         =========|
+|=========            University of California Santa Cruz             =========|
+|=========                                                            =========|
+|=========          Usage help: openram-user-group@ucsc.edu           =========|
+|=========        Development help: openram-dev-group@ucsc.edu        =========|
+|=========          Temp dir: /tmp/openram_peepu_27231_temp/          =========|
+|=========                See LICENSE for license info                =========|
+|==============================================================================|
+** Start: 03/25/2021 14:30:01
+Technology: sky130A
+Total size: 32 bits
+Word size: 2
+Words: 16
+Banks: 1
+Write size: None
+RW ports: 1
+R-only ports: 0
+W-only ports: 0
+DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+DRC/LVS/PEX is disabled (check_lvsdrc=True to enable).
+Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+Words per row: 1
+Output files are: 
+/home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.lvs
+/home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.sp
+/home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.v
+/home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.lib
+/home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.py
+/home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.html
+/home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.log
+/home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.lef
+/home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.gds
+** Submodules: 1.5 seconds
+** Placement: 0.0 seconds
+**** Retrieving pins: 0.1 seconds
+**** Analyzing pins: 0.4 seconds
+**** Finding blockages: 0.4 seconds
+**** Converting blockages: 0.1 seconds
+**** Converting pins: 2.1 seconds
+**** Separating adjacent pins: 0.1 seconds
+**** Enclosing pins: 0.5 seconds
+*** Finding pins and blockages: 3.6 seconds
+WARNING: file supply_tree_router.py: line 139: Unblocking supply self blockages to improve access (may cause DRC errors):
+gnd
+{(layer=m3 ll=v[53.03,7.575] ur=v[53.47,8.015]), (layer=m3 ll=v[52.99,7.535] ur=v[53.51,8.055])})
+
+*** Maze routing supplies: 11.7 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 0.5 seconds
+**** Converting blockages: 0.2 seconds
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[0] layer=m3 ll=v[12.57,-8.44] ur=v[13.01,-8.0])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[0] layer=m3 ll=v[12.530000000000001,-8.48] ur=v[13.05,-7.96])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[1] layer=m3 ll=v[25.28,-8.44] ur=v[25.72,-8.0])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[1] layer=m3 ll=v[25.240000000000002,-8.48] ur=v[25.76,-7.96])
+
+**** Converting pins: 0.3 seconds
+**** Separating adjacent pins: 0.0 seconds
+**** Enclosing pins: 0.1 seconds
+*** Finding pins and blockages: 1.0 seconds
+*** Maze routing pins: 3.7 seconds
+** Routing: 41.0 seconds
+** Verification: 0.0 seconds
+** SRAM creation: 42.6 seconds
+SP: Writing to /home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.sp
+** Spice writing: 0.1 seconds
+GDS: Writing to /home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.gds
+** GDS: 0.2 seconds
+LEF: Writing to /home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.lef
+** LEF: 0.6 seconds
+LVS: Writing to /home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.lvs.sp
+** LVS writing: 0.0 seconds
+LIB: Characterizing... 
+** Characterization: 0.9 seconds
+Config: Writing to /home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.py
+** Config: 0.1 seconds
+Datasheet: Writing to /home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.html
+** Datasheet: 0.1 seconds
+Verilog: Writing to /home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A.v
+** Verilog: 0.0 seconds
+Extended Config: Writing to /home/peepu/VSDSRAM_sky130/temp/sram_2_16_sky130A_extended.py
+** Extended Config: 0.0 seconds
+** End: 44.7 seconds
