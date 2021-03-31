@@ -1,0 +1,85 @@
+timestamp 1616270591
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 1e+06
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+port "D" 0 127 236 153 262 m2
+port "Q" 1 1016 205 1042 231 m2
+port "clk" 2 47 154 73 180 m2
+port "vdd" 3 592 398 631 418 m1
+port "gnd" 4 539 -17 674 16 m1
+node "net5" 2227 443.077 923 57 ndif 0 0 0 0 0 0 0 0 5670 438 7425 490 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11396 1112 0 0 0 0 0 0 0 0 0 0 0 0
+node "net2" 2153 405.657 343 57 ndif 0 0 0 0 0 0 0 0 5082 410 6655 462 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10871 1022 0 0 0 0 0 0 0 0 0 0 0 0
+node "D" 542 348.79 127 236 m2 0 0 0 0 0 0 0 0 1932 176 2530 202 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6542 654 2016 190 1088 132 0 0 0 0 0 0 0 0
+node "net4" 1918 1037.34 802 57 ndif 0 0 0 0 0 0 0 0 4452 296 5830 322 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5379 704 0 0 7779 794 7832 794 0 0 0 0 0 0 0 0 0 0
+node "Q" 1677 941.826 1016 205 m2 0 0 0 0 0 0 0 0 1680 164 2200 190 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5379 704 0 0 11163 1036 2016 190 1024 128 0 0 0 0 0 0 0 0
+node "net1" 1918 1006.5 222 57 ndif 0 0 0 0 0 0 0 0 4452 296 5830 322 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5379 704 0 0 7779 794 7605 744 0 0 0 0 0 0 0 0 0 0
+node "net3" 3236 943.096 499 42 p 0 0 0 0 0 0 0 0 5334 422 6985 474 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5379 704 0 0 17983 1438 0 0 0 0 0 0 0 0 0 0 0 0
+node "clkb" 3259 1913.09 79 57 ndif 0 0 0 0 0 0 0 0 1932 176 2530 202 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13648 1722 0 0 10935 1184 16768 1658 0 0 0 0 0 0 0 0 0 0
+node "clk" 3967 2368.17 47 154 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20933 2598 0 0 5742 612 19918 1734 992 126 0 0 0 0 0 0 0 0
+node "vdd" 17728 4624.9 592 398 m1 0 0 0 0 228780 2902 0 0 19663 1484 11330 742 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48372 3208 41745 2596 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 539 -17 m1 0 0 0 0 0 0 0 0 8652 664 15129 1476 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 47436 3130 41349 2572 0 0 0 0 0 0 0 0 0 0
+cap "net4" "clk" 184.574
+cap "net4" "net5" 176.09
+cap "vdd" "Q" 112.985
+cap "net1" "net2" 182.337
+cap "clkb" "net2" 102.205
+cap "net3" "net1" 193.011
+cap "net3" "clkb" 296.91
+cap "net4" "Q" 257.478
+cap "net1" "clk" 486.441
+cap "clkb" "clk" 1426.57
+cap "clkb" "net5" 57.4996
+cap "net4" "vdd" 20.7784
+cap "net1" "D" 102.536
+cap "clkb" "D" 385.346
+cap "net3" "net2" 27.3625
+cap "clkb" "Q" 20.9503
+cap "net2" "clk" 98.6571
+cap "net3" "clk" 98.4781
+cap "net3" "net5" 12.6628
+cap "net1" "vdd" 20.7784
+cap "clkb" "vdd" 260.035
+cap "net5" "clk" 60.0451
+cap "net2" "D" 49.1922
+cap "D" "clk" 62.548
+cap "clkb" "net4" 114.867
+cap "clk" "Q" 9.16637
+cap "net5" "Q" 63.5755
+cap "net2" "vdd" 97.4054
+cap "net3" "vdd" 185.211
+cap "clk" "vdd" 193.798
+cap "net5" "vdd" 101.025
+cap "clkb" "net1" 410.582
+cap "net3" "net4" 28.2857
+cap "D" "vdd" 55.0478
+device msubckt sky130_fd_pr__nfet_01v8 1198 57 1199 58 l=15 w=42 "gnd" "net4" 30 0 "gnd" 42 0 "Q" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 1103 57 1104 58 l=15 w=42 "gnd" "Q" 30 0 "net5" 42 0 "gnd" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 908 57 909 58 l=15 w=42 "gnd" "clkb" 30 0 "net4" 42 0 "net5" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 787 57 788 58 l=15 w=42 "gnd" "clk" 30 0 "net3" 42 0 "net4" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 594 57 595 58 l=15 w=42 "gnd" "net1" 30 0 "gnd" 42 0 "net3" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 499 57 500 58 l=15 w=42 "gnd" "net3" 30 0 "net2" 42 0 "gnd" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 328 57 329 58 l=15 w=42 "gnd" "clk" 30 0 "net1" 42 0 "net2" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 207 57 208 58 l=15 w=42 "gnd" "clkb" 30 0 "D" 42 0 "net1" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 64 57 65 58 l=15 w=42 "gnd" "clk" 30 0 "gnd" 42 0 "clkb" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 1198 291 1199 292 l=15 w=55 "vdd" "net4" 30 0 "vdd" 55 0 "Q" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 1103 291 1104 292 l=15 w=55 "vdd" "Q" 30 0 "net5" 55 0 "vdd" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 908 291 909 292 l=15 w=55 "vdd" "clk" 30 0 "net4" 55 0 "net5" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 787 291 788 292 l=15 w=55 "vdd" "clkb" 30 0 "net3" 55 0 "net4" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 594 291 595 292 l=15 w=55 "vdd" "net1" 30 0 "vdd" 55 0 "net3" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 499 291 500 292 l=15 w=55 "vdd" "net3" 30 0 "net2" 55 0 "vdd" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 328 291 329 292 l=15 w=55 "vdd" "clkb" 30 0 "net1" 55 0 "net2" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 207 291 208 292 l=15 w=55 "vdd" "clk" 30 0 "D" 55 0 "net1" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 64 291 65 292 l=15 w=55 "vdd" "clk" 30 0 "vdd" 55 0 "clkb" 55 0
+subcap "net2" -101.991
+subcap "D" -33.0702
+subcap "net1" -172.375
+subcap "net3" -226.178
+subcap "clkb" -887.532
+subcap "clk" -2312.64
+subcap "vdd" -2421.69
+subcap "gnd" -773.89
+subcap "Q" -839.374
